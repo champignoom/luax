@@ -40,13 +40,7 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
   - before: (a few dozens lines of code, see [ConTeXt an excursion](http://www.pragma-ade.com/general/manuals/ma-cb-en.pdf), section 13.3: Extreme tables)
   - after:
 ```lua
-\xtable.setup[
-  split='yes',
-  header='repeat',
-  offset='4pt',
-]
-
-\xtable[
+\xtable[split='yes', header='repeat', offset='4pt'][
   head={
        align='middle', foregroundstyle='bold',
        {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},
