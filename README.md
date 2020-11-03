@@ -4,8 +4,9 @@ An experimental fusion of ConTeXt and Lua
 This is an experimental syntax sugar for ConTeXt that potentially helps those who speak lua and try to avoid
 re-learning basic programming concepts, such as assignment, linear structure, control flow, etc., disguised under
 the exoteric syntaxes and definitions of \*TeX.
-Nevertheless, the syntax convensions of ConTeXt are preserved as much as possible.
 It could also avoid certain [pitfalls](https://mailman.ntg.nl/pipermail/ntg-context/2020/097020.html) due to the ad-hoc parser of \*TeX.
+
+Nevertheless, the syntax convensions of ConTeXt are preserved as much as possible.
 
 Syntax
 ======
