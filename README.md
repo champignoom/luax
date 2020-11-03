@@ -1,7 +1,7 @@
 An experimental fusion of ConTeXt and Lua
 =====
 
-This is an experimental syntax sugar for ConTeXt that potentially helps those who speak lua and try to avoid
+This is an experimental syntax sugar for ConTeXt built upon the Lua interface of ConText. It aims at further facilitates those who speak lua and try to avoid
 re-learning basic programming concepts, such as assignment, linear structure, control flow, etc., disguised under
 the exoteric syntaxes and definitions of \*TeX.
 It could also avoid certain [pitfalls](https://mailman.ntg.nl/pipermail/ntg-context/2020/097020.html) due to the ad-hoc parsers of \*TeX.
