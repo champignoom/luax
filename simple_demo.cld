@@ -1,9 +1,9 @@
 luax = require('luax')
 luax.run_luax()
---[[luax
+--[==[luax
 
 luax.text\{
-  \(myhead = luax.section:copy{numberstyle='bold', textstyle='bold', before=\{\luax.hairline\luax.blank}, after=\{\luax.nowhitespace\luax.hairline}})
+  \(myhead = luax.section:copy{numberstyle='bold', textstyle='bold', before=[[\hairline\blank]], after=[[\nowhitespace\hairline]]})
   \myhead{Section Name}
 
   Only \\, \{, \} has to be escaped. $, _, ^, and all the others don't have to be escaped.
@@ -36,4 +36,4 @@ luax.text\{
   ]
 }
 
-]]
+]==]

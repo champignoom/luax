@@ -30,7 +30,7 @@ Save `luax.lua` and `simple_demo.cld` into the same directory, run `context simp
 The demo is by no means efficient or complete, but should suffice to illustrate the idea.
 - setuphead
   - before: `\setuphead[myhead][section][numberstyle=bold, textstyle=bold, before=\hairline\blank, after=\nowhitespace\hairline]`
-  - after:  `myhead = section:copy{numberstyle='bold', textstyle='bold', before=\{\hairline\blank}, after=\{\nowhitespace\hairline}}`
+  - after:  `myhead = section:copy{numberstyle='bold', textstyle='bold', before=[[\hairline\blank]], after=[[\nowhitespace\hairline]]}`
 - setupxtable
   - before: `\setupxtable[split=yes, header=repeat, offset=4pt]
   - after:  `\xtable.setup[split='yes', header='repeat', offset='4pt']
