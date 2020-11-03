@@ -39,22 +39,23 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
 - startxtable
   - before: (a few dozens lines of code, see [ConTeXt an excursion](http://www.pragma-ade.com/general/manuals/ma-cb-en.pdf), section 13.3: Extreme tables)
   - after:
-```lua
-\xtable[split='yes', header='repeat', offset='4pt'][
-  head={
-       align='middle', foregroundstyle='bold',
-       {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},
-       {foregroundstyle='bold', {width='1.2cm', 'Year'}, '1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'},
-  },
-  next={
-       {{nx=6, align='middle', foregroundstyle='bold', "Decline of wealth in Dutch florine (Dfl) / Continued"}},
-       {foregroundstyle='bold', {'Year', '1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'}},
-  },
-  body={
-  	align='middle',
-       {1675, 22, '~7', '~5', '~4', '~5'},
-       {1724, '~4', '~4', '--', '~4', '~3'},
-  },
-]
-```
+
+        ```lua
+        \xtable[split='yes', header='repeat', offset='4pt'][
+          head={
+               align='middle', foregroundstyle='bold',
+               {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},
+               {foregroundstyle='bold', {width='1.2cm', 'Year'}, '1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'},
+          },
+          next={
+               {{nx=6, align='middle', foregroundstyle='bold', "Decline of wealth in Dutch florine (Dfl) / Continued"}},
+               {foregroundstyle='bold', {'Year', '1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'}},
+          },
+          body={
+          	align='middle',
+               {1675, 22, '~7', '~5', '~4', '~5'},
+               {1724, '~4', '~4', '--', '~4', '~3'},
+          },
+        ]
+        ```
 
