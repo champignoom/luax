@@ -38,7 +38,13 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
   - before: (a few dozens lines of code)
   - after:
 ```lua
-\luax.xtable[
+\xtable.setup[
+  split='yes',
+  header='repeat',
+  offset='4pt',
+]
+
+\xtable[
   head={
        align='middle', foregroundstyle='bold',
        {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},
@@ -53,12 +59,6 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
        {1675, 22, '~7', '~5', '~4', '~5'},
        {1724, '~4', '~4', '--', '~4', '~3'},
   },
-]
-
-\luax.xtable.setup[
-  split='yes',
-  header='repeat',
-  offset='4pt',
 ]
 ```
 
