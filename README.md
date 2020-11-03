@@ -40,6 +40,7 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
   - before: (see [ConTeXt an excursion](http://www.pragma-ade.com/general/manuals/ma-cb-en.pdf), section 13.3: Extreme tables)
 
     ```tex
+    \setupxtable[split=yes,header=repeat,offset=4pt]
     \startxtable
      \startxtablehead[align=middle,foregroundstyle=bold]
       \startxrow
