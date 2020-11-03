@@ -7,7 +7,7 @@ luax.text\{
   \myhead{Section Name}
 
   Only \\, \{, \} has to be escaped. $, _, ^, and all the others don't have to be escaped.
-  The number \luax.math{𝜋}  is irrational but \math.pi  is rational.
+  The number \luax.math{𝜋} is irrational but \math.pi is rational.
 
   \luax.math{C_{a_i}^j}
 

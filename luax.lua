@@ -69,7 +69,7 @@ module.grammar = P{
 		+ Cc"cmd"          * V"TextCmd"
 		+ Cc"lua"          * "\\(" * V"AbstractLua" * ")"
 	),
-	TextCmd = Ct("\\" * Cg(V"TextCmdName", "name") * Cg(Ct(V"TextCmdParam"^0), "params") * P" "^-1),
+	TextCmd = Ct("\\" * Cg(V"TextCmdName", "name") * Cg(Ct(V"TextCmdParam"^0), "params") * P"|"^-1),
 	TextCmdName = C(V"Identifier" * ("." * V"Identifier")^0),
 	TextCmdParam = Ct(
 		  Cc"round_bracket"  * "(" * V"AbstractLua" * ")"
@@ -310,7 +310,8 @@ end
 function module._feed_pure_text(s)
 	assert(type(s)=='string');
 	-- FIXME: catcode
-	context((s:gsub("%$","\\$")))
+	-- extra parenthesis for passing only one argument
+	context((s:gsub("%$","\\$"):gsub("|", "\\|")))
 end
 
 local function shift_args(n, ...)
