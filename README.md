@@ -34,8 +34,8 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
   - before: `\setuphead[myhead][section][numberstyle=bold, textstyle=bold, before=\hairline\blank, after=\nowhitespace\hairline]`
   - after:  `myhead = section:copy{numberstyle='bold', textstyle='bold', before=[[\hairline\blank]], after=[[\nowhitespace\hairline]]}`
 - setupxtable
-  - before: `\setupxtable[split=yes, header=repeat, offset=4pt]
-  - after:  `\xtable.setup[split='yes', header='repeat', offset='4pt']
+  - before: `\setupxtable[split=yes, header=repeat, offset=4pt]`
+  - after:  `\xtable.setup[split='yes', header='repeat', offset='4pt']`
 - startxtable
   - before: (a few dozens lines of code)
   - after:
