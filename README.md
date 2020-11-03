@@ -37,7 +37,7 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
   - before: `\setupxtable[split=yes, header=repeat, offset=4pt]`
   - after:  `\xtable.setup[split='yes', header='repeat', offset='4pt']`
 - startxtable
-  - before: (a few dozens lines of code)
+  - before: (a few dozens lines of code, see [ConTeXt an excursion](http://www.pragma-ade.com/general/manuals/ma-cb-en.pdf), section 13.3: Extreme tables)
   - after:
 ```lua
 \xtable.setup[
