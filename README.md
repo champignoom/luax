@@ -60,7 +60,8 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
   - after:
 
     ```lua
-    \xtable[split='yes', header='repeat', offset='4pt'][
+    \xtable.setup[split='yes', header='repeat', offset='4pt']
+    \xtable[
       head={
            align='middle', foregroundstyle='bold',
            {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},
