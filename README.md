@@ -62,7 +62,7 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
 
     ```lua
     { \(local header = {'1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'})
-      \(local title = "Decline of wealth in Dutch florine (Dfl)"
+      \(local title = "Decline of wealth in Dutch florine (Dfl)")
       \luax.xtable[split='yes', header='repeat', offset='4pt'][
         head={
              align='middle', foregroundstyle='bold',
