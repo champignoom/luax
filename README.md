@@ -11,7 +11,7 @@ Nevertheless, the syntax convensions of ConTeXt are preserved as much as possibl
 Syntax
 ======
 
-The new syntax fuses TeX and Lua in a similar way that ReactJS fuses HTML and Javascript.
+The syntax sugar fuses TeX and Lua in a similar way that [JSX](https://reactjs.org/docs/introducing-jsx.html) fuses HTML and Javascript.
 The Lua syntax is enhanced with one more synax: `\{text area}`, roughly meaning `context.delayed("text area")`.
 Inside the text area, there are three special syntaxes:
 - `\(lua code)`
