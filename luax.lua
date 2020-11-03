@@ -5,7 +5,6 @@ context = {
 }
 --]]
 
-package.cpath = package.cpath .. ";/home/exprosic/code/clones/lpeg-1.0.2/lpeg.so"
 local lpeg = require("lpeg")
 local C = lpeg.C
 local P = lpeg.P
