@@ -21,7 +21,7 @@ Syntax inside the text area includes:
 
 The `\command` is now syntax sugar for lua expressions and is not processed by TeX
 
-Only `\`, `{`, `}` has to be escaped when typeset as string. Ideally the concept of catcode should be completely transparent to the user as long as we have a decent functioning grammar.
+Only `\`, `{`, `}` has to be escaped when typeset as string. Ideally the concept of catcode should be transparent to the user as long as we have a decent grammar.
 
 The exact grammar defined with LPeg as well as the desugaring rules are in `luax.lua`.
 
