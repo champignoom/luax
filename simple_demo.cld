@@ -11,9 +11,6 @@ luax.text\{
 
   \luax.math{C_{a_i}^j}
 
-
-  \luax.xtable.setup
-
   \luax.xtable[split='yes', header='repeat', offset='4pt'][
     head={
          align='middle', foregroundstyle='bold',
