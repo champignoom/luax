@@ -13,7 +13,8 @@ Syntax
 
 The syntax sugar fuses TeX and Lua in a similar way that [JSX](https://reactjs.org/docs/introducing-jsx.html) fuses HTML and Javascript.
 The Lua syntax is enhanced with one more synax: `\{text area}`, roughly meaning `context.delayed("text area")`.
-Inside the text area, there are three special syntaxes:
+Syntax inside the text area includes:
+- `\% comments`
 - `\(lua code)`
 - `\command(params1)[params2]{text3}(params4)...`, equivalent to `\(command(params1, {params2}, \{text3}, params4, ...))` or `tostring(command)` depending on its type
 - `{..}`, creating a lua and TeX scope
@@ -61,22 +62,24 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
 
     ```lua
     { \(local header = {'1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'})
-      \xtable[split='yes', header='repeat', offset='4pt'][
+      \(local title = "Decline of wealth in Dutch florine (Dfl)"
+      \luax.xtable[split='yes', header='repeat', offset='4pt'][
         head={
              align='middle', foregroundstyle='bold',
-             {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},
-             {foregroundstyle='bold', {width='1.2cm', 'Year'}, table.unpack(legend)},
+             {{nx=6, title}},
+             {foregroundstyle='bold', {width='1.2cm', 'Year'}, table.unpack(header)},
         },
         next={
-             {{nx=6, align='middle', foregroundstyle='bold', "Decline of wealth in Dutch florine (Dfl) / Continued"}},
-             {foregroundstyle='bold', {'Year', table.unpack(legend)}},
+             {{nx=6, align='middle', foregroundstyle='bold', title.." / Continued"}},
+             {foregroundstyle='bold', {'Year', table.unpack(header)}},
         },
         body={
-             align='middle',
+        	align='middle',
              {1675, \{\luax.math{22}}, '~7', '~5', '~4', '~5'},
              {1724, '~4', '~4', '--', '~4', '~3'},
         },
       ]
     }
+    \% `header` and `title` is out of scope and therefore invisible here
     ```
 
