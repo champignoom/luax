@@ -12,13 +12,9 @@ luax.text\{
   \luax.math{C_{a_i}^j}
 
 
-  \luax.xtable.setup[
-    split='yes',
-    header='repeat',
-    offset='4pt',
-  ]
+  \luax.xtable.setup
 
-  \luax.xtable[
+  \luax.xtable[split='yes', header='repeat', offset='4pt'][
     head={
          align='middle', foregroundstyle='bold',
          {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},

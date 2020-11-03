@@ -313,11 +313,25 @@ function module._feed_pure_text(s)
 	context((s:gsub("%$","\\$")))
 end
 
+local function shift_args(n, ...)
+	local m = select("#", ...)
+	if n>m then
+		return nil, shift_args(n-1, ...)
+	elseif n==m then
+		return ...
+	else
+		error("too much arguments")
+	end
+end
+
 module.xtable = {
 	setup = context.setupxtable,
 }
 setmetatable(module.xtable, {
-	__call = function(f, args)
+	__call = function(f, ...)
+		local args, table = shift_args(2, ...)
+		args = args or {}
+
 		local function do_tag(tag_name, tag_args, content_callback)
 			local configs = {}
 			for k,v in pairs(tag_args) do
@@ -341,8 +355,7 @@ setmetatable(module.xtable, {
 		end
 
 		local function do_section(section_name)
-			print('@@@', args, section_name)
-			do_tag('xtable'..section_name, args[section_name], function(row_args)
+			do_tag('xtable'..section_name, table[section_name], function(row_args)
 				do_tag('xrow', row_args, function(cell_args)
 					if type(cell_args)~='table' then
 						context.startxcell()
@@ -355,7 +368,7 @@ setmetatable(module.xtable, {
 			end)
 		end
 
-		context.startxtable()
+		context.startxtable(args)
 		do_section('head')
 		do_section('next')
 		do_section('body')
