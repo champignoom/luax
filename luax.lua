@@ -342,6 +342,7 @@ setmetatable(module.xtable, {
 		end
 
 		local function do_section(section_name)
+			print('@@@', args, section_name)
 			do_tag('xtable'..section_name, args[section_name], function(row_args)
 				do_tag('xrow', row_args, function(cell_args)
 					if type(cell_args)~='table' then
