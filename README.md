@@ -22,7 +22,7 @@ The `\command` is now syntax sugar for lua expressions and is not processed by T
 
 Only `\`, `{`, `}` has to be escaped when typeset as string. Ideally the concept of catcode should be completely transparent to the user as long as we have a decent functioning grammar.
 
-The exact grammar defined with LPeg as well as the transpilation rules are in `luax.lua`.
+The exact grammar defined with LPeg as well as the desugaring rules are in `luax.lua`.
 
 
 Proof of Concept
