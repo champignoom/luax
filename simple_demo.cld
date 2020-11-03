@@ -6,27 +6,30 @@ luax.text\{
   \(myhead = luax.section:copy{numberstyle='bold', textstyle='bold', before=[[\hairline\blank]], after=[[\nowhitespace\hairline]]})
   \myhead{Section Name}
 
-  Only \\, \{, \} has to be escaped. $, _, ^, and all the others don't have to be escaped.
+  Only \\, \{, \} has to be escaped. $, _, %, ^, and all the other ascii characters don't have to be escaped.
   The number \luax.math{𝜋} is irrational but \math.pi is rational.
 
   \luax.math{C_{a_i}^j}
 
 
-  { \(local header = {'1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'})
+  { \(local header = {
+        foregroundstyle='bold',
+        {width='1.2cm', 'Year'}, '1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'
+      })
     \(local title = "Decline of wealth in Dutch florine (Dfl)")
     \luax.xtable[split='yes', header='repeat', offset='4pt'][
       head={
            align='middle', foregroundstyle='bold',
            {{nx=6, title}},
-           {foregroundstyle='bold', {width='1.2cm', 'Year'}, table.unpack(header)},
+           header,
       },
       next={
            {{nx=6, align='middle', foregroundstyle='bold', title.." / Continued"}},
-           {foregroundstyle='bold', {'Year', table.unpack(header)}},
+           header,
       },
       body={
-      	align='middle',
-           {1675, \{\luax.math{22}}, '~7', '~5', '~4', '~5'},
+           align='middle',
+           {1675, 22, '~7', '~5', '~4', '~5'},
            {1724, '~4', '~4', '--', '~4', '~3'},
       },
     ]

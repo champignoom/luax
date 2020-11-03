@@ -61,21 +61,24 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
   - after:
 
     ```lua
-    { \(local header = {'1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'})
+    { \(local header = {
+          foregroundstyle='bold',
+          {width='1.2cm', 'Year'}, '1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'
+        })
       \(local title = "Decline of wealth in Dutch florine (Dfl)")
       \luax.xtable[split='yes', header='repeat', offset='4pt'][
         head={
              align='middle', foregroundstyle='bold',
              {{nx=6, title}},
-             {foregroundstyle='bold', {width='1.2cm', 'Year'}, table.unpack(header)},
+             header,
         },
         next={
              {{nx=6, align='middle', foregroundstyle='bold', title.." / Continued"}},
-             {foregroundstyle='bold', {'Year', table.unpack(header)}},
+             header,
         },
         body={
-        	align='middle',
-             {1675, \{\luax.math{22}}, '~7', '~5', '~4', '~5'},
+             align='middle',
+             {1675, 22, '~7', '~5', '~4', '~5'},
              {1724, '~4', '~4', '--', '~4', '~3'},
         },
       ]

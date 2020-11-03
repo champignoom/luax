@@ -311,7 +311,7 @@ function module._feed_pure_text(s)
 	assert(type(s)=='string');
 	-- FIXME: catcode
 	-- extra parenthesis for passing only one argument
-	context((s:gsub("%$","\\$"):gsub("|", "\\|")))
+	context((s:gsub("[%%$|]","\\%1")))
 end
 
 local function shift_args(n, ...)
