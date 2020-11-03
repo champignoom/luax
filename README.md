@@ -60,22 +60,23 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
   - after:
 
     ```lua
-    \xtable.setup[split='yes', header='repeat', offset='4pt']
-    \xtable[
-      head={
-           align='middle', foregroundstyle='bold',
-           {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},
-           {foregroundstyle='bold', {width='1.2cm', 'Year'}, '1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'},
-      },
-      next={
-           {{nx=6, align='middle', foregroundstyle='bold', "Decline of wealth in Dutch florine (Dfl) / Continued"}},
-           {foregroundstyle='bold', {'Year', '1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'}},
-      },
-      body={
-      	align='middle',
-           {1675, 22, '~7', '~5', '~4', '~5'},
-           {1724, '~4', '~4', '--', '~4', '~3'},
-      },
-    ]
+    { \(local header = {'1.000--2.000', '2.000--3.000', '3.000-5.000', '5.000-10.000', 'over 10.000'})
+      \xtable[split='yes', header='repeat', offset='4pt'][
+        head={
+             align='middle', foregroundstyle='bold',
+             {{nx=6, "Decline of wealth in Dutch florine (Dfl)"}},
+             {foregroundstyle='bold', {width='1.2cm', 'Year'}, table.unpack(legend)},
+        },
+        next={
+             {{nx=6, align='middle', foregroundstyle='bold', "Decline of wealth in Dutch florine (Dfl) / Continued"}},
+             {foregroundstyle='bold', {'Year', table.unpack(legend)}},
+        },
+        body={
+             align='middle',
+             {1675, \{\luax.math{22}}, '~7', '~5', '~4', '~5'},
+             {1724, '~4', '~4', '--', '~4', '~3'},
+        },
+      ]
+    }
     ```
 
