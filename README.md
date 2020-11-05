@@ -87,3 +87,6 @@ The demo is by no means efficient or complete, but should suffice to illustrate 
     \% `header` and `title` is out of scope and therefore invisible here
     ```
 
+<!--
+  TODO: metafun, ./tex/texmf-context/doc/context/sources/general/manuals/metafun/metafun-syntax.tex
+  -->
