@@ -1,3 +1,3 @@
-# LuaX
+# Introduction
 
 TeX without suffering.
