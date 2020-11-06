@@ -2,3 +2,4 @@ site_name: LuaX
 theme: readthedocs
 nav:
         - index.md
+        - quick-preview.md
